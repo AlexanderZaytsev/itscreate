@@ -1,0 +1,10 @@
+- content_for :javascript do
+  :javascript
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(#{raw @markers.to_json});
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
+
+#map{style: 'width: 100%; height: 100%'}
