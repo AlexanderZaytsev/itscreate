@@ -15,7 +15,7 @@ gem 'haml-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
-gem 'intercity', group: :development, require: false
+gem 'intercity', '~> 0.0.4', group: :development, require: false
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
@@ -34,7 +34,7 @@ end
 
 group :production do
   gem 'mysql2'
-  gem 'unicorn'
+  gem 'unicorn', '~> 4.7.0'
 end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
